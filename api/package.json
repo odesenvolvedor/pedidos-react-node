@@ -1,0 +1,27 @@
+{
+  "name": "pedidos-react-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odesenvolvedor/pedidos-react-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odesenvolvedor/pedidos-react-node/issues"
+  },
+  "homepage": "https://github.com/odesenvolvedor/pedidos-react-node#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}
