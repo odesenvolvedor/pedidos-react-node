@@ -1,6 +1,4 @@
 import Validator from "../validators/Validator";
-
-//import * as Yup from "yup";
 import CustomerService from "../services/CustomerService";
 import Response from "../helpers/Response";
 
@@ -18,12 +16,13 @@ class CustomersController {
     async create(req, res) {
 
         const schema = Validator.yup().object().shape({
-            name: Validator.yup().string().required(),
-            phone: Validator.yup().string().required(),
-            birth_date: Validator.yup().date().required(),
+            name        : Validator.yup().string().required(),
+            phone       : Validator.yup().string().required(),
+            birth_date  : Validator.yup().date().required(),
         });
 
         const errors = await Validator.validate(schema, req.body)
+
         if (errors) {
             return Response.makeResponse(res, errors, 422);
         }
@@ -34,12 +33,13 @@ class CustomersController {
     async update(req, res) {
 
         const schema = Validator.yup().object().shape({
-            name: Validator.yup().string().required(),
-            phone: Validator.yup().string().required(),
-            birth_date: Validator.yup().date().required(),
+            name        : Validator.yup().string().required(),
+            phone       : Validator.yup().string().required(),
+            birth_date  : Validator.yup().date().required(),
         });
 
         const errors = await Validator.validate(schema, req.body)
+        
         if (errors) {
             return Response.makeResponse(res, errors, 422);
         }
