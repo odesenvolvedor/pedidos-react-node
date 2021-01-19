@@ -14,7 +14,6 @@ class Database {
         this.connection = new Sequelize(config);
         this.init();
         this.associate();
-        console.log("construtor database");
     }
 
     init() {
