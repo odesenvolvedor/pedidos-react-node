@@ -44,7 +44,6 @@ class Validator {
     yup = () => Yup;
 
     validate = (schema, data) => {
-        console.log(data);
         return schema
             .validate(data, { abortEarly: false })
             .then(_ => null)
