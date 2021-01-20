@@ -23,7 +23,7 @@ export const mainListItems = (
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <CustomLink to="clientes">
+      <CustomLink to="/clientes">
         <ListItemText primary="Clientes" />
       </CustomLink>
     </ListItem>
@@ -32,7 +32,7 @@ export const mainListItems = (
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <CustomLink to="produtos">
+      <CustomLink to="/produtos">
         <ListItemText primary="Produtos" />
       </CustomLink>
     </ListItem>
@@ -41,7 +41,7 @@ export const mainListItems = (
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <CustomLink to="pedidos">
+      <CustomLink to="/pedidos">
         <ListItemText primary="Pedidos" />
       </CustomLink>
     </ListItem>

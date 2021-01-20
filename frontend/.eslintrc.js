@@ -24,6 +24,9 @@ module.exports = {
     'prettier/prettier': 'warn',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
     'import/prefer-default-export': 'off',
+    'eslint-disable-line': 'off',
+    'react/no-unused-state': 'off',
+    'no-console': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {

@@ -14,7 +14,8 @@ import {
 import Container from '@material-ui/core/Container';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import { mainListItems } from '../components/ListItems';
 import { useStyles } from '../styles/material';
 
@@ -78,7 +79,12 @@ const Layout = ({ children }) => {
       <main className={classes.content}>
         <div className={classes.appBarSpacer}>
           <Container maxWidth="lg" className={classes.container}>
-            {children}
+            <Grid container spacing={3}>
+              {/* Chart */}
+              <Grid item xs={12} md={8} lg={9}>
+                <Paper className={classes.paper}>{children}</Paper>
+              </Grid>
+            </Grid>
           </Container>
         </div>
       </main>

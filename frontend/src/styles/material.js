@@ -5,6 +5,10 @@ const drawerWidth = 240;
 export const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    '& .MuiTextField-root': {
+      margin: theme.spacing(1),
+      width: '25ch',
+    },
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -65,6 +69,7 @@ export const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     height: '100vh',
     overflow: 'auto',
+    paddingTop: '80px',
   },
   container: {
     paddingTop: theme.spacing(4),

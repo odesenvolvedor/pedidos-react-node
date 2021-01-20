@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container } from '../../components';
+import { CenterContainer } from '../../components';
 
 function NotFound() {
   return (
-    <Container>
+    <CenterContainer>
       <h1>404</h1>
       <p>A página que você procura não existe mais.</p>
-    </Container>
+    </CenterContainer>
   );
 }
 

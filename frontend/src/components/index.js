@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const CenterContainer = styled.div`
   text-align: center;
-  margin-top: 2rem;
+  padding-top: 2rem;
 `;
 
 export const CustomLink = styled(Link)`

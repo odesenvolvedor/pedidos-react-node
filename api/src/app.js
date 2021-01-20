@@ -1,6 +1,7 @@
 import "dotenv/config";
 
 import express from "express";
+import cors from "cors";
 import Youch from "youch";
 import "express-async-errors";
 
@@ -11,6 +12,7 @@ import "./app/models";
 class App {
   constructor() {
     this.server = express();
+    this.server.use(cors());
 
     this.middlewares();
     this.routes();
