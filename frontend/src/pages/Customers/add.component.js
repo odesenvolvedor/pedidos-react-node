@@ -115,7 +115,7 @@ export default function AddCustomer() {
               }}
             />
           </div>
-          <div>
+          <div style={{ marginTop: '30px' }}>
             {submitted ? (
               <CircularProgress />
             ) : (

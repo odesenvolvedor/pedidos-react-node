@@ -91,7 +91,7 @@ export default function AddProduct() {
               variant="outlined"
             />
           </div>
-          <div>
+          <div style={{ marginTop: '30px' }}>
             {submitted ? (
               <CircularProgress />
             ) : (

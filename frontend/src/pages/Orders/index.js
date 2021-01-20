@@ -1,4 +1,9 @@
-import { Button, CircularProgress, Container, Typography } from '@material-ui/core';
+import {
+  Button,
+  CircularProgress,
+  Container,
+  Typography,
+} from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -53,51 +58,56 @@ function Orders() {
         Adicionar Pedido
       </Button>
       <h1>Pedidos</h1>
-      {submitted
-        ? (<CircularProgress />)
-        : (
-          <TableContainer component={Paper}>
-            <Table
-              className={classes.table}
-              size="small"
-              aria-label="a dense table"
-            >
-              <TableHead>
+      {submitted ? (
+        <CircularProgress />
+      ) : (
+        <TableContainer component={Paper}>
+          <Table
+            className={classes.table}
+            size="small"
+            aria-label="a dense table"
+          >
+            <TableHead>
+              <TableRow>
+                <TableCell>Número do Pedido</TableCell>
+                <TableCell align="left">Cliente</TableCell>
+                <TableCell align="left">Valor Total</TableCell>
+                <TableCell align="left">Data</TableCell>
+                <TableCell align="center">Ações</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.length ? (
+                rows.map((row) => (
+                  <TableRow key={row.id}>
+                    <TableCell component="th" scope="row">
+                      {row.order_number}
+                    </TableCell>
+                    <TableCell align="left">{row.customer.name}</TableCell>
+                    <TableCell align="left">{row.amount}</TableCell>
+                    <TableCell align="left">
+                      {new Date(row.createdAt).toLocaleDateString()}
+                    </TableCell>
+                    <TableCell align="center">
+                      <Button title="Editar">
+                        <CreateIcon color="primary" />
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))
+              ) : (
                 <TableRow>
-                  <TableCell>Número do Pedido</TableCell>
-                  <TableCell align="left">Cliente</TableCell>
-                  <TableCell align="left">Valor</TableCell>
-                  <TableCell align="center">Ações</TableCell>
+                  <CenterContainer>
+                    <Typography variant="h5" component="h6">
+                      Nenhum Pedido Encontrado
+                    </Typography>
+                  </CenterContainer>
                 </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.length ?
-                  (rows.map((row) => (
-                    <TableRow key={row.id}>
-                      <TableCell component="th" scope="row">
-                        {row.order_number}
-                      </TableCell>
-                      <TableCell align="left">{row.customer.name}</TableCell>
-                      <TableCell align="left">{row.amount}</TableCell>
-                      <TableCell align="center">
-                        <Button title="Editar">
-                          <CreateIcon color="primary" />
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                  )))
-                  : (
-                    <TableRow>
-                      <CenterContainer>
-                      <Typography variant="h5" component="h6">
-                          Nenhum Pedido Encontrado
-                      </Typography>
-                      </CenterContainer>
-                    </TableRow>)}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        )}
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
     </Container>
   );
 }

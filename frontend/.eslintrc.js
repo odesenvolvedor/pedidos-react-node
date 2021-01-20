@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'warn',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
+    'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     'eslint-disable-line': 'off',
     'react/no-unused-state': 'off',

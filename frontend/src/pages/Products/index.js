@@ -67,23 +67,24 @@ function Products() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {
-              submitted ? (
+            {submitted ? (
               <CircularProgress />
-            ) : (rows.map((row) => (
-              <TableRow key={row.id}>
-                <TableCell component="th" scope="row">
-                  {row.id}
-                </TableCell>
-                <TableCell align="left">{row.name}</TableCell>
-                <TableCell align="left">{row.price}</TableCell>
-                <TableCell align="center">
-                  <Button title="Editar">
-                    <CreateIcon color="primary" />
-                  </Button>
-                </TableCell>
-              </TableRow>
-            )))}
+            ) : (
+              rows.map((row) => (
+                <TableRow key={row.id}>
+                  <TableCell component="th" scope="row">
+                    {row.id}
+                  </TableCell>
+                  <TableCell align="left">{row.name}</TableCell>
+                  <TableCell align="left">{row.price}</TableCell>
+                  <TableCell align="center">
+                    <Button title="Editar">
+                      <CreateIcon color="primary" />
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))
+            )}
           </TableBody>
         </Table>
       </TableContainer>
